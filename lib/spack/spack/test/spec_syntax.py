@@ -828,4 +828,6 @@ class TestSpecSyntax(object):
 
         for a, b in itertools.product(specs, repeat=2):
             # Check that we can compare without raising an error
+            print("a:", str(a), type(a))
+            print("b:", str(b), type(b))
             assert a <= b or b < a

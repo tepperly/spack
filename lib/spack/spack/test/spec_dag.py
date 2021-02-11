@@ -519,6 +519,11 @@ class TestSpecDag(object):
         assert spec == expected_flat
         assert spec.eq_dag(expected_flat)
 
+        print(spec.tree(color=True))
+        print(expected_normalized.tree(color=True))
+        print(spec == expected_normalized)
+        print(spec != expected_normalized)
+
         # Normalized has different DAG structure, so NOT equal.
         assert spec != expected_normalized
         assert not spec.eq_dag(expected_normalized)
